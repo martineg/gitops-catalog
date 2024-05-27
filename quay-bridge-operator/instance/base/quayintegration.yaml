@@ -1,0 +1,11 @@
+apiVersion: quay.redhat.com/v1
+kind: QuayIntegration
+metadata:
+  name: quayintegration
+spec:
+  clusterID: openshift
+  credentialsSecret:
+    namespace: openshift-operators
+    name: quay-integration
+  quayHostname: https://REPLACE_ME
+  insecureRegistry: false

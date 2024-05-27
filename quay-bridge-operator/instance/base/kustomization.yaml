@@ -1,0 +1,13 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- quayintegration.yaml
+
+namespace: openshift-operators
+secretGenerator:
+  - name: quay-integration
+    literals:
+    - token=REPLACE_ME
+
+generatorOptions:
+  disableNameSuffixHash: true
